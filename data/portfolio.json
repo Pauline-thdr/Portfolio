@@ -1,20 +1,20 @@
 [
     {
-        "image": "image1.png",
-        "title": "Booki",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#"
-    },
-    {
-        "image": "image2.png",
-        "title": "Mon Vieux grimoire",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#"
+        "image": "image4.png",
+        "title": "Sophie Bluel",
+        "text": "Création d’une page web dynamique en JavaScript avec gestion du DOM et communication avec une API.",
+        "link": "https://github.com/Pauline-thdr/portfolio-architecte-sophie-bluel.git"
     },
     {
         "image": "image3.png",
         "title": "Kasa",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-        "link": "#"
+        "text": "Développement d’une application web de location immobilière avec React, incluant la création de composants et la gestion de la navigation avec React Router.",
+        "link": "https://github.com/Pauline-thdr/projet-8-react-kasa.git"
+    },
+    {
+        "image": "image5.png",
+        "title": "Eco Bliss Bath",
+        "text": "Automatisation de tests end-to-end pour une boutique en ligne afin de valider les fonctionnalités clés et garantir la qualité de l’application.",
+        "link": "https://github.com/Pauline-thdr/Eco-Bliss-Bath-V2.git"
     }
 ]

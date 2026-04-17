@@ -88,6 +88,38 @@
     text-align: center;
 }
 
+/* Force les colonnes à avoir la même hauteur et les cartes à s'étirer */
+#portfolio .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#portfolio .col-lg-4 {
+    display: flex;
+    flex-direction: column;
+}
+
+#portfolio .card {
+    flex: 1; /* La carte occupe tout l'espace vertical disponible dans la colonne */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Espace entre les lignes sur mobile */
+}
+
+#portfolio .card-body {
+    flex: 1; /* Le corps de la carte pousse le bouton vers le bas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Aligne le titre/texte en haut et le bouton en bas */
+}
+
+/* Optimisation portfolio : Forcer la même taille pour toutes les images de projet */
+.portfolioContent .card-img-top {
+    height: 200px; /* Ajuste cette valeur (200px, 180px, etc.) selon la taille de Kasa */
+    object-fit: cover; /* Recadre l'image intelligemment pour remplir l'espace sans la déformer */
+    width: 100%;
+}
+
 /* contact */
 .contactColumn {
     display: flex;
