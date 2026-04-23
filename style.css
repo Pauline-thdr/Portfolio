@@ -17,9 +17,44 @@
     padding-bottom: 4rem;
 }
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8fb;
+    color: #282828;
+    line-height: 1.6;
+}
+
+/* nav barre permanente */
+.navbar {
+    background-color: #C8C8C8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
 /* display background dark color on navbar scroll */
 .navbarScroll.navbarDark {
-    background-color: #5b5b5b;
+    background: linear-gradient(135deg, #f3f0f5, #e9e4ec);
+}
+
+/* Couleur du nom 'Pauline' dans la nav barre */
+.navbar-brand {
+    color: #963C8C !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Ajoute une ombre */
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: #E687DC !important;
+}
+
+/* Amélioration du contraste pour l'accessibilité (Score Lighthouse) */
+.navbar-dark .navbar-nav .nav-link {
+    color: #963C8C !important;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Ajoute une ombre */
+    font-weight: 500;
+    transition: all 0.3s ease;
 }
 
 /* hero background image */
@@ -30,6 +65,7 @@
     background-size: cover;
     position: relative;
 }
+
 /* text css above hero image*/
 .hero_title {
     font-size: 4.5rem;
@@ -44,6 +80,41 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+
+    text-shadow: 
+        0 0 10px rgba(150, 60, 140, 0.6),
+        0 0 20px rgba(150, 60, 140, 0.4),
+        0 0 30px rgba(150, 60, 140, 0.3);
+}
+
+section {
+    position: relative;
+    padding-bottom: 60px;
+}
+
+/* Ligne de séparation */
+section::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 2px;
+    margin: 60px auto 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #963C8C,
+        #E687DC,
+        transparent
+    );
+
+    border-radius: 2px;
+}
+#home::after {
+    display: none;
+}
+#contact::after {
+    display: none;
 }
 
 /* about */
@@ -53,6 +124,11 @@
 .imageAboutPage {
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#about p,
+#about li {
+    color: #091C5A;
 }
 
 /* skills */
@@ -73,14 +149,27 @@
     text-align: center;
     width: 100%;
 }
+.card {
+    color: #091C5A;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(150, 60, 140, 0.18);
+}
 .card-title {
     text-align: center;
 }
 .card:hover .skillsIcon {
-    color: #008000;
+    color: #963C8C;
 }
 .skillsText:hover {
-    border: 1px solid #008000;
+    border: 1px solid #963C8C;
 }
 
 /* portfolio */
@@ -106,28 +195,130 @@
     margin-bottom: 20px; /* Espace entre les lignes sur mobile */
 }
 
+#portfolio .card:hover {
+    border: 1px solid #963C8C;
+}
+
 #portfolio .card-body {
     flex: 1; /* Le corps de la carte pousse le bouton vers le bas */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Aligne le titre/texte en haut et le bouton en bas */
+    justify-content: space-between;
 }
 
 /* Optimisation portfolio : Forcer la même taille pour toutes les images de projet */
 .portfolioContent .card-img-top {
-    height: 200px; /* Ajuste cette valeur (200px, 180px, etc.) selon la taille de Kasa */
-    object-fit: cover; /* Recadre l'image intelligemment pour remplir l'espace sans la déformer */
+    height: 200px;
+    object-fit: cover;
     width: 100%;
 }
 
+.portfolioContent .card-img-top {
+    height: 220px;
+    object-fit: cover;
+    width: 100%;
+    border-bottom: 3px solid #963C8C;
+}
+/* Nouveau thème pour le bouton */
+.portfolioContent .btn {
+    width: 100%;
+    padding: 12px 20px;
+    
+    background: linear-gradient(135deg, #963C8C, #E687DC);
+    border: none;
+    border-radius: 12px;
+
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(150, 60, 140, 0.3);
+}
+.portfolioContent .btn:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(150, 60, 140, 0.4);
+    
+    background: linear-gradient(135deg, #E687DC, #963C8C);
+}
+
 /* contact */
+#contact {
+    background: linear-gradient(135deg, #f3f0f5, #e9e4ec);
+    padding: 80px 0;
+    color: #091C5A;
+}
+
+/* 1. On cible le conteneur qui contient toutes tes colonnes de contact */
+#contact .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+/* 2. On ajuste tes cartes pour qu'elles se partagent l'espace proprement */
 .contactColumn {
+    flex: 1;
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
 }
+.contactColumn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(150, 60, 140, 0.2);
+}
+
 .contactColumn i {
-    color: #198754;
+    font-size: 40px;
+    color: #963C8C;
+    margin-bottom: 15px;
+
+    transition: all 0.3s ease;
+}
+.contactColumn:hover i {
+    color: #E687DC;
+    transform: scale(1.15);
+}
+
+.contactColumn h4 {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contactColumn p {
+    color: #505050;
+    font-size: 0.95rem;
+}
+
+#contact p {
+    color: #091C5A;
 }
 
 /* footer */
+
+/**/
+h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #091C5A;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #963C8C, #E687DC);
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 2px;
+}

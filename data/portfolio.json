@@ -1,6 +1,12 @@
 [
     {
-        "image": "image4.png",
+        "image": "image1.png",
+        "title": "724events",
+        "text": "Réalisation d’une campagne de tests fonctionnels et exploratoires sur une application web, incluant la rédaction de cas de test, l’exécution, le reporting et le suivi des anomalies via Jira.",
+        "link": "https://github.com/Pauline-thdr/Menez-une-campagne-de-tests.git"
+    },
+    {
+        "image": "image2.png",
         "title": "Sophie Bluel",
         "text": "Création d’une page web dynamique en JavaScript avec gestion du DOM et communication avec une API.",
         "link": "https://github.com/Pauline-thdr/portfolio-architecte-sophie-bluel.git"
@@ -12,9 +18,15 @@
         "link": "https://github.com/Pauline-thdr/projet-8-react-kasa.git"
     },
     {
-        "image": "image5.png",
+        "image": "image4.png",
         "title": "Eco Bliss Bath",
         "text": "Automatisation de tests end-to-end pour une boutique en ligne afin de valider les fonctionnalités clés et garantir la qualité de l’application.",
         "link": "https://github.com/Pauline-thdr/Eco-Bliss-Bath-V2.git"
+    },
+    {
+        "image": "image5.png",
+        "title": "Tomsen",
+        "text": "Conception d’une stratégie de test complète pour une application du secteur financier : analyse des besoins, gestion des risques, planification Agile et rédaction d’un cahier de recette détaillé.",
+        "link": "https://github.com/Pauline-thdr/Concevez-une-strategie-de-test.git"
     }
 ]
